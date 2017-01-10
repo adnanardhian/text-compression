@@ -8,7 +8,6 @@ COMP_LEN = []
 DECOM_TEXT = []
 TOF = []
 
-
 def charToBin(teks):
     binary_string = ''
     for i in range (0,len(teks)):
@@ -32,7 +31,7 @@ def charToBin(teks):
         elif b ==10:
             pass            
         else:
-            binary_string += '{0:08b}'.format(b)
+            binary_string += '{0:08b}'.format(b)    
     
     temp = len(binary_string)%8
     if temp == 0:
@@ -53,7 +52,6 @@ def compressText(teksin):
             n = int(showBin[:8], 2)
             teksout+=chr(n)
             showBin = showBin[8:]
-    
     return teksout
     
 def decompressText(teksin):
